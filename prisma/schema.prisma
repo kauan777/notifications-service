@@ -9,3 +9,15 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Notification {
+  id          String    @id
+  recipientId String
+  content     String
+  category    String
+  readAt      DateTime?
+  createdAt   DateTime  @default(now())
+
+  // Indices garantem a facilidade de filtragem de informações por algum campo ou a soma de mais campos
+  @@index([recipientId])
+}
