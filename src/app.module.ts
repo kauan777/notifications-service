@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { PrismaService } from './prisma.service';
 
 @Module({
   imports: [],
@@ -10,7 +10,7 @@ import { AppService } from './app.service';
   Porém o service precisa ter o decorator @Injectable() */
 
   controllers: [AppController],
-  providers: [AppService],
+  providers: [PrismaService],
 })
 export class AppModule {}
 
