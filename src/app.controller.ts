@@ -1,6 +1,7 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { PrismaService } from './prisma.service';
 import { randomUUID } from 'crypto';
+import { CreateNotificationBody } from './create-notification-body';
 
 /* Atribuindo decorator @Controller a class AppController
  para indicar que esta class é um Controller */
@@ -9,7 +10,7 @@ import { randomUUID } from 'crypto';
 export class AppController {
   constructor(private readonly prisma: PrismaService) {}
 
-  /* Como primeiro parâmetro, o método/decorator Get pode receber o caminho da rota
+  /* Como primeiro parâmetro, o método/decorator GET pode receber o caminho da rota
   assim como o @Controller também. O que faira que a rota do get ficasse dentro da rota do controller */
 
   @Get()
@@ -18,13 +19,15 @@ export class AppController {
   }
 
   @Post()
-  async create() {
+  async create(@Body() body: CreateNotificationBody) {
+    const { recipientId, content, category } = body;
+
     await this.prisma.notification.create({
       data: {
         id: randomUUID(),
-        content: 'Você tem uma nova solicitação de amizade',
-        category: 'social',
-        recipientId: randomUUID(),
+        content,
+        category,
+        recipientId,
       },
     });
   }
