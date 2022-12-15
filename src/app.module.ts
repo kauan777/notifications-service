@@ -15,3 +15,7 @@ import { AppService } from './app.service';
 export class AppModule {}
 
 // Para classes abstratas, muda a estrutura do 'providers'
+
+// Module é um acoplador, ele acopla todos os controllers e services
+
+// Um module pode importar outro em 'imports'
