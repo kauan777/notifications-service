@@ -23,13 +23,13 @@ export class AppController {
     const { recipientId, content, category } = body;
     console.log('my changes');
 
-    // await this.prisma.notification.create({
-    //   data: {
-    //     id: randomUUID(),
-    //     content,
-    //     category,
-    //     recipientId,
-    //   },
-    // });
+    await this.prisma.notification.create({
+      data: {
+        id: randomUUID(),
+        content,
+        category,
+        recipientId,
+      },
+    });
   }
 }
