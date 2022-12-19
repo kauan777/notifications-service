@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { PrismaService } from './prisma.service';
+import { AppController } from './infra/app.controller';
+import { PrismaService } from './infra/prisma.service';
 
 @Module({
   imports: [],
@@ -14,8 +14,8 @@ import { PrismaService } from './prisma.service';
 })
 export class AppModule {}
 
-// Para classes abstratas, muda a estrutura do 'providers'
+// Para classes abstratas(contrato), muda a estrutura do 'providers'
 
 // Module é um acoplador, ele acopla todos os controllers e services
 
-// Um module pode importar outro em 'imports'
+// Um module pode importar outros module em 'imports'
