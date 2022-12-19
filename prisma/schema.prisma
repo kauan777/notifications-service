@@ -18,6 +18,6 @@ model Notification {
   readAt      DateTime?
   createdAt   DateTime  @default(now())
 
-  // Indices garantem a facilidade de filtragem de informações por algum campo ou a soma de mais campos
+  // Indices garantem a facilidade de filtragem de informações por algum campo ou na soma de mais campos
   @@index([recipientId])
 }
