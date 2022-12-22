@@ -16,6 +16,7 @@ model Notification {
   content     String
   category    String
   readAt      DateTime?
+  canceledAt  DateTime?
   createdAt   DateTime  @default(now())
 
   // Indices garantem a facilidade de filtragem de informações por algum campo ou na soma de mais campos
