@@ -37,5 +37,3 @@ export class SendNotification {
 // Unico método 'execute' seguindo os principios da responsabilidade única do solid
 
 // Receber objectos e sempre que possivel retornar objetos
-
-// 01:30:23
