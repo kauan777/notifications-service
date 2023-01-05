@@ -24,7 +24,7 @@ DATABASE_URL="file:./dev.db"
 PASSWORD=[SUA SENHA DO UPSTASH]
 ```
 
-## No arquivo kafka-consumer.service.ts, troque as configurações pelas suas
+## No arquivo kafka-consumer.service.ts, troque as configurações pelas suas do UPSTASH
 
 ```ts
 import { Injectable, OnModuleDestroy } from '@nestjs/common';
