@@ -1,3 +1,7 @@
+<h1 align="center">Hi 👋, Bem vindo ao projeto</h1>
+
+
+
 ## Descrição
 
 Micro-serviço de notificações, onde ele poderá ser usado por outros micro-serviços através do kafka.
@@ -5,17 +9,21 @@ Micro-serviço de notificações, onde ele poderá ser usado por outros micro-se
 Link do fake producer⤵
   <a href="">Fake producer</a>
 
+<br/>
+
 ## Instalar as dependências
 
 ```bash
 $ yarn
 ```
+<br/>
 
 ## Migrar tabelas do banco com o prisma
 
 ```bash
   yarn migrate
 ```
+<br/>
 
 ## Inserir as variáveis ambiente
 
@@ -23,6 +31,7 @@ $ yarn
 DATABASE_URL="file:./dev.db"
 PASSWORD=[SUA SENHA DO UPSTASH]
 ```
+<br/>
 
 ## No arquivo kafka-consumer.service.ts, troque as configurações pelas suas do UPSTASH
 
@@ -56,6 +65,7 @@ export class KafkaCosumerService
 }
 
 ```
+<br/>
 
 ## Rode a aplicação
 ```bash
