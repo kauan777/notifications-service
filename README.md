@@ -7,7 +7,7 @@
 Micro-serviço de notificações, onde ele poderá ser usado por outros micro-serviços através do kafka.
 
 Link do fake producer⤵
-  <a href="">Fake producer</a>
+  <a href="https://github.com/kauan777/notification-service--fake-producer">Fake producer</a>
 
 <br/>
 
